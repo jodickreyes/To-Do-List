@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do List</title>
+
+    <style>
+        /* Container */
+    div {
+        max-width: 400px; margin: 20px auto; font-family: Arial, sans-serif;
+    }
+
+    /* Paragraph (list item) */
+    .list-item {
+        background: #f4f4f4;
+        padding: 10px 15px;
+        margin: 10px 0;
+        border-radius: 6px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    /* Delete button */
+    .delete-btn {
+        background: crimson;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .delete-btn:hover {
+        background: darkred;
+    }
+
+    /* Input & main button (optional) */
+    input {
+        padding: 8px;
+        width: 70%;
+        text-align: center;
+    }
+
+    #btn {
+        padding: 8px 12px;
+        cursor: pointer;
+    }
+    
+    
+    .completed {
+        text-decoration: line-through;
+        color: gray;
+        opacity: 0.7;
+    }
+
+    </style> 
+
+</head>
+<body>
+    <div>
+        <h1>ToDo List</h1>
+
+        <ul class="ul">
+            <li>Enter a To do list:</li>
+        </ul>
+        <input type="text" id="input">
+        <button id="btn">Add List</button>
+    </div>
+
+    <script src="Code.js"></script>
+    </body>
+</html>
