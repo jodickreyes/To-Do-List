@@ -6,54 +6,115 @@
     <title>To do List</title>
 
     <style>
-        /* Container */
-    div {
-        max-width: 400px; margin: 20px auto; font-family: Arial, sans-serif;
-    }
-
-    /* Paragraph (list item) */
-    .list-item {
-        background: #f4f4f4;
-        padding: 10px 15px;
-        margin: 10px 0;
-        border-radius: 6px;
+    /* Page background */
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        min-height: 100vh;
+        margin: 0;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-
     }
 
-    /* Delete button */
-    .delete-btn {
-        background: crimson;
-        color: #fff;
+    /* Main container */
+    div {
+        background: #ffffff;
+        width: 360px;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Title */
+    h1 {
+        text-align: center;
+        margin-bottom: 15px;
+        color: #333;
+    }
+
+    /* Instruction text */
+    .ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 10px;
+        font-size: 14px;
+        color: #666;
+    }
+
+    /* Input */
+    #input {
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+        font-size: 14px;
+        outline: none;
+    }
+
+    #input:focus {
+        border-color: #667eea;
+    }
+
+    /* Add button */
+    #btn {
+        width: 100%;
+        padding: 10px;
+        background: #667eea;
+        color: white;
         border: none;
-        padding: 5px 10px;
-        border-radius: 4px;
+        border-radius: 8px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    #btn:hover {
+        background: #5a67d8;
+    }
+
+    /* List item */
+    .list-item {
+        position: relative;
+        background: #f7f7f7;
+        margin-top: 10px;
+        padding: 10px 80px 10px 40px; /* space for checkbox & delete */
+        border-radius: 8px;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    /* Checkbox (LEFT) */
+    .list-item input[type="checkbox"] {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    /* Delete button (RIGHT) */
+    .delete-btn {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #e53e3e;
+        color: white;
+        border: none;
+        padding: 5px 8px;
+        border-radius: 6px;
+        font-size: 12px;
         cursor: pointer;
     }
 
     .delete-btn:hover {
-        background: darkred;
+        background: #c53030;
     }
 
-    /* Input & main button (optional) */
-    input {
-        padding: 8px;
-        width: 70%;
-        text-align: center;
-    }
-
-    #btn {
-        padding: 8px 12px;
-        cursor: pointer;
-    }
-    
-    
+    /* Completed state */
     .completed {
         text-decoration: line-through;
-        color: gray;
-        opacity: 0.7;
+        color: #999;
     }
 
     </style> 
