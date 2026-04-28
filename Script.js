@@ -22,9 +22,13 @@ button.addEventListener('click', () => {
     list.textContent = data
     list.classList.add("list-item");
 
-    // List triggered when Complete
-    list.addEventListener('click', () => {
-        list.classList.toggle("completed");
+    // Checkbox triggered when Complete
+    const checkBox = document.createElement("input");
+    checkBox.type = "checkbox"
+
+    // Toggle Complete state
+    checkBox.addEventListener('change', () => {
+        list.classList.toggle("completed", checkBox.checked);
     })
 
     // Create Delete Button
@@ -39,6 +43,7 @@ button.addEventListener('click', () => {
     })
 
     // Build structure
+    list.appendChild(checkBox);
     list.appendChild(deleteBtn);
     container.appendChild(list);
 })
